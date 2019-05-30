@@ -25,14 +25,5 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function post(Request $request)
-    {
-        // Auth::user()->blogs()->create()
-        $blog = new Blog;
-        $blog->title = $request->input('blog_title');
-        $blog->content = $request->input('blog_contents');
-        Auth::user()->blogs()->save($blog);
-        //Auth::user() means LoginUser
-        return redirect('/home');
-    }
+    
 }
