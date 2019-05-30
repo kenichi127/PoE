@@ -28,13 +28,13 @@
 </style>
 <body>
 <h1>
-  パスワードリセット
+  Password Reset
 </h1>
 <p>
-  以下のボタンを押下し、パスワードリセットの手続きを行ってください。
+Please push the following button and perform the password reset procedure.
 </p>
 <p id="button">
-  <a href="{{$reset_url}}">パスワードリセット</a>
+  <a href="{{$reset_url}}">Reset</a>
 </p>
 </body>
 </html>

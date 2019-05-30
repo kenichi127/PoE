@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="row">
@@ -76,9 +76,6 @@
   <option value="6+">6+</option>
   <option value="7">7</option>
 </select>
-<a href="※"><button>search</button></a>
-    </div>
-          
-    <div class="col-md-3"></div>
+<a href="/answer"><button>search</button></a>
 </div>
 @endsection

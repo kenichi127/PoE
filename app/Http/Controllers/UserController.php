@@ -13,7 +13,6 @@ class UserController extends Controller
     {
         $auth_id = Auth::user()->id;
         $users = User::where('id', '!=', $auth_id)->get();
-        // dd(auth()->user()->following()->find());
         return view('users', compact('users'));
     }
 
