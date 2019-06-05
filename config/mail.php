@@ -116,7 +116,7 @@ return [
         'theme' => 'default',
 
         'paths' => [
-            resource_path('views/mail/html/passwordreset'),
+            resource_path('views/vendor/mail'),
         ],
     ],
 

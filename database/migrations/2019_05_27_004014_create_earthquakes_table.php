@@ -15,11 +15,11 @@ class CreateEarthquakesTable extends Migration
     {
         Schema::create('earthquakes', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('place');
             $table->text('year');
             $table->text('Month');
             $table->text('Day');
             $table->text('value');
+            $table->text('place');
             $table->text('earthquake level');
             $table->timestamps();
         });
