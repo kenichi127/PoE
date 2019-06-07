@@ -38,14 +38,14 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Demail" class="col-md-4 col-form-label text-md-right">{{ __('Safety E-Mail Address') }}</label>
+                            <label for="D_email" class="col-md-4 col-form-label text-md-right">{{ __('Safety E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Demail" type="email" class="form-control{{ $errors->has('Demail') ? ' is-invalid' : '' }}" name="Demail" value="{{ old('Demail') }}" required>
+                                <input id="D_email" type="email" class="form-control{{ $errors->has('D_email') ? ' is-invalid' : '' }}" name="D_email" value="{{ old('D_email') }}" required>
 
-                                @if ($errors->has('Demail'))
+                                @if ($errors->has('D_email'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('Demail') }}</strong>
+                                        <strong>{{ $errors->first('D_email') }}</strong>
                                     </span>
                                 @endif
                             </div>
