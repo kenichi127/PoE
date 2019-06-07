@@ -18,7 +18,20 @@ Route::get('/', function () {
 Route::get('/answer', function () {
     return view('answer');
 });
+Route::get('/contribution', function () {
+    return view('contribution');
+});
+Route::get('/history', function () {
+    return view('history');
+});
+Route::get('/food', function () {
+    return view('foodlist');
+});
+Route::get('/addpage', function () {
+    return view('add');
+});
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post', 'HomeController@post')->name('post');
 Route::get('/users', 'UserController@users');
+Route::get('/sample/mailable/send', 'SampleController@SampleNotification');

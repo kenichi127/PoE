@@ -32,7 +32,26 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+<<<<<<< Updated upstream
 
+=======
+                <div class="container">
+                @if (Route::has('register'))
+                @elseif($data>=80)
+                <h3 class="bg-danger">Today is $data%.</h3>
+                @elseif($data>=60)
+                <h3 class="bg-warning">Today is $data%.</h3>
+                @elseif($data>=40)
+                <h3 class="bg-success">Today is $data%.</h3>
+                @elseif($data>=20)
+                <h3 class="bg-info">Today is $data%.</h3>
+                @elseif($data>=0)
+                <h3 class="bg-light">Today is $data%.</h3>
+                @else($data==null)
+                <h3>I am sorry  No data.</h3>
+                @endif
+                </div>
+>>>>>>> Stashed changes
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEarthquakesTable extends Migration
+class CreateContributionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateEarthquakesTable extends Migration
      */
     public function up()
     {
-        Schema::create('earthquakes', function (Blueprint $table) {
+        Schema::create('contribution', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->text('year');
-            $table->text('Month');
-            $table->text('Day');
-            $table->text('E_value');
-            $table->text('place');
-            $table->text('earthquake level');
+            $table->string('title');
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -34,6 +30,10 @@ class CreateEarthquakesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('earthquakes');
+        Schema::table('contribution', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
+
+        Schema::dropIfExists('contribution');
     }
 }
