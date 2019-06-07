@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('Demail')->unique();
             $table->timestamp('Demail_verified_at')->nullable();
             $table->string('password');
-            $table->string('status');
             $table->rememberToken();
             $table->timestamps();
         });
