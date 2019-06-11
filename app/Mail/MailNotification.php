@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SampleNotification extends Mailable
+class MailNotification extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -32,7 +32,7 @@ class SampleNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.sample_notification')
+        return $this->view('emails.email_notification')
                     ->subject($this->title)
                     ->with([
                         'text' => $this->text,
