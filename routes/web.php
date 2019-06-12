@@ -32,6 +32,6 @@ Route::get('/addpage', function () {
 });
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/post', 'HomeController@post')->name('post');
+Route::post('/post', 'EarhquakesController@post')->name('post');
 Route::get('/users', 'UserController@users');
 Route::get('/mail/mailable/send', 'MailController@MailNotification');
