@@ -1,9 +1,9 @@
-@extends('layouts.user')
+@extends('layouts.app')
 
 @section('content')
 <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-8">
     <label>Year</label>
     <select name="year">
   <option value="2020">2020</option>
@@ -76,6 +76,31 @@
   <option value="6+">6+</option>
   <option value="7">7</option>
 </select>
+<label>Place</label>
+<select name="place">
+<option value="world">World</option>
+  <option value="Japan">Japan</option>
+  <option value="America">America</option>
+  <option value="Philipine">Philipine</option>
+  </select>
 <a href="/answer"><button>search</button></a>
+@if(auth()->user()->id == 1)
+<a href="/addpage"><button>additional</button></a>
+@else
+
+@endif
+</div>
+ <div class="col-md-1">
+ </div>
+ <div class="col-md-8"></div>
+ <div class="col-md-4">
+ <br>
+ <a href="/food"><button>foodlist</button></a>
+ <a href="/contribution"><button>Contribution</button></a>
+ <br>
+ <br>
+ <a href="/mail/mailable/send"><button>send e-mail</button></a>
+ <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button>Shelter</button></a>
+ </div>
 </div>
 @endsection
