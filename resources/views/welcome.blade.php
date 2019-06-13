@@ -3,6 +3,8 @@
 @section('content')
 <div class="row">
     <div class="col-md-3"></div>
+    <form method="post" action="{{ route('answer') }}">
+    @csrf
     <div class="col-md-6">
     <label>Year</label>
     <select name="year">
@@ -78,7 +80,7 @@
 </select>
 <a href="/answer"><button>search</button></a>
     </div>
-          
+   </form>
     <div class="col-md-3"></div>
 </div>
 @endsection
