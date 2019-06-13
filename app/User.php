@@ -42,4 +42,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\earthquakes');
     }
+    public function Contributions()
+    {
+        return $this->hasMany('App\Contribution','title','content','id');
+    }
 }

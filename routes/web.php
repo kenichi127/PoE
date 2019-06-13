@@ -18,9 +18,6 @@ Route::get('/', function () {
 Route::get('/answer', function () {
     return view('answer');
 });
-Route::get('/contribution', function () {
-    return view('contribution');
-});
 Route::get('/history', function () {
     return view('history');
 });
@@ -35,3 +32,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post', 'EarhquakesController@post')->name('post');
 Route::get('/users', 'UserController@users');
 Route::get('/mail/mailable/send', 'MailController@MailNotification');
+Route::post('/post', 'Earhquakescontroller@post')->name('post');
+Route::get('/contribution', 'ContributionController@index');
+Route::post('/contribution/add', 'ContributionController@add');
+Route::post('/contribution/delete/{id}', 'ContributionController@delete');
+Route::get('/users', 'UserController@users');
+Route::get('/contribution/{id}/edit', 'ContributionController@contribution_edit');
+Route::get('/contribution/{id}/update', 'ContributionController@contribution_update');

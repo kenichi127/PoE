@@ -15,5 +15,5 @@ class UserController extends Controller
         $users = User::where('id', '!=', $auth_id)->get();
         return view('users', compact('users'));
     }
-
+    
 }
