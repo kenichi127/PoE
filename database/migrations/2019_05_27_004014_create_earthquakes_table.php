@@ -22,7 +22,7 @@ class CreateEarthquakesTable extends Migration
             $table->text('Day');
             $table->text('E_value');
             $table->text('place');
-            $table->text('earthquake level');
+            $table->text('earthquakelevel');
             $table->timestamps();
         });
     }
