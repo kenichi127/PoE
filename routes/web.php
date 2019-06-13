@@ -39,3 +39,6 @@ Route::post('/contribution/delete/{id}', 'ContributionController@delete');
 Route::get('/users', 'UserController@users');
 Route::get('/contribution/{id}/edit', 'ContributionController@contribution_edit');
 Route::get('/contribution/{id}/update', 'ContributionController@contribution_update');
+Route::get('/user/{id}/edit', 'UserController@user_edit');
+Route::get('/user/{id}/update', 'UserController@user_update');
+
