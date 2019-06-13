@@ -66,7 +66,8 @@ class ContributionController extends Controller
         return redirect('/contribution');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $contribution=Contribution::find($id);
         $contribution->delete();
         return redirect('/contribution');
