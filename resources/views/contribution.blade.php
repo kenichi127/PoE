@@ -8,7 +8,7 @@
                 <div class="form-group">
                     {{ csrf_field() }}
                     <p class="ext-monospace">Title</p>
-                    <input type="text" name="title" class="form-control @if ($errors->has('title')) is-invalid @endif" 
+                    <input type="text" name="title" class="form-control" 
                     value="{{old('title')}}">
                     @if ($errors->has('title'))
                     <span class="invalid-feedback">{{ $errors->first('title') }}</span>
@@ -39,9 +39,8 @@
                             <a href="/contribution/{{$contribution->id}}/edit">
                             <input type="submit" value="edit" class="btn btn-info btn-sm">
                             </a>
-                            @else
                             @endif
-                        <form method="post" action="/contribution/delete/{{$contribution->id}}">
+                        <form method="post" action="/contribution/{{$contribution->id}}/delete">
                         {{ csrf_field() }}
                         <input type="submit" value="delete" class="btn btn-danger btn-sm" 
                         onclick='return confirm("Delete this article OK??");'>
@@ -51,13 +50,11 @@
                         <a href="/contribution/{{$contribution->id}}/edit">
                         <input type="submit" value="edit" class="btn btn-info btn-sm">
                         </a>
-                        <form method="post" action="/contribution/delete/{{$contribution->id}}">
+                        <form method="post" action="/contribution/{{$contribution->id}}/delete">
                         {{ csrf_field() }}
                         <input type="submit" value="delete" class="btn btn-danger btn-sm"
                          onclick='return confirm("Delete this article OK??");'>
                         </form>
-                        
-                        @else
                         @endif
                     </div>
                     </div>
