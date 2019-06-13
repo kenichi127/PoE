@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
@@ -7,6 +9,7 @@ use Carbon\Carbon;
 use Validator;
 use App\Http\Requests\EditProfile;
 use Illuminate\Support\Facades\Hash;
+
 class UserController extends Controller
 { 
     public function users()
@@ -15,5 +18,5 @@ class UserController extends Controller
         $users = User::where('id', '!=', $auth_id)->get();
         return view('users', compact('users'));
     }
-
+    
 }

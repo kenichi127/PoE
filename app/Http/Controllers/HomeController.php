@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -25,5 +28,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
     
 }

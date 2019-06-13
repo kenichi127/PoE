@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContributionTable extends Migration
+class CreateContributionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateContributionTable extends Migration
      */
     public function up()
     {
-        Schema::create('contribution', function (Blueprint $table) {
+        Schema::create('contributions', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');
             $table->text('content');
             $table->timestamps();
@@ -30,7 +30,7 @@ class CreateContributionTable extends Migration
      */
     public function down()
     {
-        Schema::table('contribution', function (Blueprint $table) {
+        Schema::table('contributions', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
         });
 
