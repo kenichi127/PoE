@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Contribution','title','content','id');
     }
+    public function foods()
+    {
+        return $this->hasMany('App\Foods');
+    }
 }
