@@ -20,8 +20,8 @@
         <tr>
             <td>{{ $food->foodname }}</td>
             <td>{{ $food->date }}</td>
-            <td><button><a href="food/edit/{{ $food->id }}">edit</a></button>
-            <button><a href="food/delete/{{ $food->id }}">delete</a></button></td>
+            <td><button><a href="food/{{ $food->id }}/edit">edit</a></button>
+            <button><a href="food/{{ $food->id }}/delete">delete</a></button></td>
             </tr>
         @endforeach
     </table>

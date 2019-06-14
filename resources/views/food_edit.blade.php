@@ -7,7 +7,7 @@
                 edit food data
             </h1>
 
-            <form action="/food/update/{{ $food->id }}">
+            <form action="/food/{{ $food->id }}/update">
                 @csrf
 
                 <fieldset class="mb-4">
