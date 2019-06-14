@@ -3,10 +3,12 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <div class="rounded p-4" style="background-color:white">
                 <h3><strong>Edit Profile</strong></h3>
+                <h5>If you don't want to change your password, you write your password in textbox.</h5>
+                <h5>If you want to change your password, you write your new password in textbox.</h5>
                 <div class="dropdown-divider py-1"></div>
                 <form action="/user/{{ $user->id }}/update">
                     @csrf
@@ -91,12 +93,12 @@
 
                     <!-- new_password -->
                     <div class="form-group row">
-                        <label for="password" class="col-md-4 col-form-label text-md-right">New Password</label>
+                        <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 
                         <div class="col-md-6">
                             <input id="password" type="password" 
                             class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" 
-                            name="password" value="{{ old('password') ?: $user->password }}">
+                            name="password">
 
                             @if ($errors->has('password'))
                             <span class="invalid-feedback" role="alert">
@@ -113,7 +115,7 @@
                         <div class="col-md-6">
                             <input id="password-confirm" type="password" 
                             class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" 
-                            name="password_confirmation" value="{{ old('password') ?: $user->password }}">
+                            name="password_confirmation">
 
                             @if ($errors->has('password_confirmation'))
                             <span class="invalid-feedback" role="alert">
@@ -130,7 +132,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-2"></div>
     </div>
 </div>
 @endsection
