@@ -18,11 +18,13 @@ class UserController extends Controller
         $users = User::where('id', '!=', $auth_id)->get();
         return view('users', compact('users'));
     }
+
     public function user_edit($id)
     {
         $user = User::find($id);
         return view('user_edit', compact('user'));
     }
+    
     public function user_update(EditProfile $request, $id)
     {
         $user = User::find($id);
