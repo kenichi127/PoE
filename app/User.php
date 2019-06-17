@@ -50,11 +50,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Foods');
     }
-<<<<<<< Updated upstream
-=======
     public function answer()
     {
         return $this->hasMany('App\answer');
     }
->>>>>>> Stashed changes
 }
