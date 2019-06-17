@@ -23,6 +23,9 @@ Route::get('/food/input', function () {
 Route::get('/addpage', function () {
     return view('add');
 });
+Route::get('/answer', function () {
+    return view('answer');
+});
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/post', 'EarhquakesController@post')->name('post');

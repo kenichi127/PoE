@@ -85,26 +85,26 @@
   <option value="America">America</option>
   <option value="Philipine">Philipine</option>
   </select>
-<a href="/answer"><button>search</button></a>
+<a href="/answer"><button class="btn btn-primary">search</button></a>
 </form>
 </div>
  <div class="col-md-3">
- @if(auth()->user()->id == 1)
-<a href="/addpage"><button>additional</button></a>
-@else
-@endif
+ 
 </div>
 </div>
 <div class="row">
  <div class="col-md-8"></div>
  <div class="col-md-4">
+ @if(auth()->user()->id == 1)
+<a href="/addpage"><button class="btn btn-info">additional</button></a>
+@else
+@endif
+ <a href="/food"><button class="btn btn-info">foodlist</button></a>
+ <a href="/contribution"><button class="btn btn-info">Contribution</button></a>
  <br>
- <a href="/food"><button>foodlist</button></a>
- <a href="/contribution"><button>Contribution</button></a>
  <br>
- <br>
- <a href="/mail/mailable/send"><button>send e-mail</button></a>
- <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button>Shelter</button></a>
+ <a href="/mail/mailable/send"><button class="btn btn-warning">send e-mail</button></a>
+ <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button class="btn btn-danger">Shelter</button></a>
  </div>
 </div>
 @endsection

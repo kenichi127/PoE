@@ -28,9 +28,9 @@
                 <strong>{{ $errors->first('date') }}</strong>
             </span>
             @endif
-        <a href="/food/inputdata"><button>Input</button></a>
+        <a href="/food/inputdata"><button class="btn btn-info">Input</button></a>
         </form>
-        <a href="/food"><button>back</button></a>
+        <a href="/food"><button class="btn btn-warning">back</button></a>
         </div>
     </div>
 </div>

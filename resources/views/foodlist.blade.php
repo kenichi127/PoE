@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-sm-9"></div>
     <div class="col-sm-3">
-        <a href="/food/input"><button>input</button></a>
+        <a href="/food/input"><button class="btn btn-info">input</button></a>
     </div>
 </div>
 <div class="row">
@@ -20,8 +20,8 @@
         <tr>
             <td>{{ $food->foodname }}</td>
             <td>{{ $food->date }}</td>
-            <td><button><a href="food/{{ $food->id }}/edit">edit</a></button>
-            <button><a href="food/{{ $food->id }}/delete">delete</a></button></td>
+            <td><a href="food/{{ $food->id }}/edit"><button class="btn btn-primary">edit</button></a>
+            <a href="food/{{ $food->id }}/delete"><button class="btn btn-danger">delete</button></a></td>
             </tr>
         @endforeach
     </table>
