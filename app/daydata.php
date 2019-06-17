@@ -7,4 +7,8 @@ class Daydata extends Model
     {
         return $this->belongsTo('App\Earthquakes','year','Month','Day','value');
     }
+    public function answer()
+    {
+        return $this->belongsTo('App\answer','year','Month','Day','value');
+    }
 }

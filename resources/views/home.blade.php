@@ -3,7 +3,9 @@
 @section('content')
 <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-md-8">
+    <div class="col-md-6">
+    <form method="post" action="{{ route('answer') }}">
+    @csrf
     <label>Year</label>
     <select name="year">
   <option value="2020">2020</option>
@@ -84,14 +86,16 @@
   <option value="Philipine">Philipine</option>
   </select>
 <a href="/answer"><button>search</button></a>
-@if(auth()->user()->id == 1)
+</form>
+</div>
+ <div class="col-md-3">
+ @if(auth()->user()->id == 1)
 <a href="/addpage"><button>additional</button></a>
 @else
-
 @endif
 </div>
- <div class="col-md-1">
- </div>
+</div>
+<div class="row">
  <div class="col-md-8"></div>
  <div class="col-md-4">
  <br>

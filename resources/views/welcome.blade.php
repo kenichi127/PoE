@@ -4,6 +4,9 @@
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
+    <form method="post" action="{{ route('answer') }}">
+    @csrf
+    
     <label>Year</label>
     <select name="year">
   <option value="2020">2020</option>
@@ -77,8 +80,9 @@
   <option value="7">7</option>
 </select>
 <a href="/answer"><button>search</button></a>
+    </form>
     </div>
-          
+    
     <div class="col-md-3"></div>
 </div>
 @endsection
