@@ -14,10 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/answer', function () {
-    return view('answer');
-});
 Route::get('/history', function () {
     return view('history');
 });
@@ -46,3 +42,5 @@ Route::post('/food/inputdata', 'Foodlistcontroller@post')->name('fpost');
 Route::get('/food/{id}/edit', 'FoodlistController@food_edit');
 Route::get('/food/{id}/update', 'FoodlistController@food_update');
 Route::get('/food/{id}/delete', 'FoodlistController@delete');
+Route::post('/answer', 'AnswerController@answer')->name('answer');
+Route::get('/answer', 'AnswerController@answer');
