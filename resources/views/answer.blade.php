@@ -57,23 +57,23 @@
 ?>
 @if($searchplace == 'world')
 <a href="https://twitter.com/intent/tweet?url={{$share_url}}&text={{$share_title_world}}">
-<button>Twitter</button> 
+<button class="btn btn-info">Twitter</button> 
 </a>
 <a href="//www.facebook.com/sharer.php?src=bm&u={{$share_url}}&t={{$share_title_world}}">
-<button>Facebook</button>
+<button class="btn btn-primary">Facebook</button>
 </a>
 <a href="//line.me/R/msg/text/?{{$share_title_world}}.'%0A'.{{$share_url}}">
-<button>LINE</button>
+<button class="btn btn-success">LINE</button>
 </a>
 @else
 <a href="https://twitter.com/intent/tweet?url={{$share_url}}&text={{$share_title}}">
-<button>Twitter</button>
+<button class="btn btn-info">Twitter</button>
 </a>
 <a href="//www.facebook.com/sharer.php?src=bm&u={{$share_url}}&t={{$share_title}}">
-<button>Facebook</button>
+<button class="btn btn-primary">Facebook</button>
 </a>
 <a href="//line.me/R/msg/text/?{{$share_title}}.'%0A'.{{$share_url}}">
-<button>LINE</button>
+<button class="btn btn-success">LINE</button>
 </a>
 @endif
 </div>

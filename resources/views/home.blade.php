@@ -8,6 +8,7 @@
     @csrf
     <label>Year</label>
     <select name="year">
+  <option value="2019">2019</option>  
   <option value="2020">2020</option>
   <option value="2021">2021</option>
   <option value="2022">2022</option>
@@ -19,6 +20,44 @@
   <option value="2028">2028</option>
   <option value="2029">2029</option>
   <option value="2030">2030</option>
+  <option value="2031">2031</option>
+  <option value="2032">2032</option>
+  <option value="2033">2033</option>
+  <option value="2034">2034</option>
+  <option value="2035">2035</option>
+  <option value="2036">2036</option>
+  <option value="2037">2037</option>
+  <option value="2038">2038</option>
+  <option value="2039">2039</option>
+  <option value="2040">2040</option>
+  <option value="2041">2041</option>
+  <option value="2042">2042</option>
+  <option value="2043">2043</option>
+  <option value="2044">2044</option>
+  <option value="2045">2045</option>
+  <option value="2046">2046</option>
+  <option value="2047">2047</option>
+  <option value="2048">2048</option>
+  <option value="2049">2049</option>
+  <option value="2050">2050</option>
+  <option value="2051">2051</option>
+  <option value="2052">2052</option>
+  <option value="2053">2053</option>
+  <option value="2054">2054</option>
+  <option value="2055">2055</option>
+  <option value="2056">2056</option>
+  <option value="2057">2057</option>
+  <option value="2058">2058</option>
+  <option value="2059">2059</option>
+  <option value="2060">2060</option>
+  <option value="2061">2061</option>
+  <option value="2062">2062</option>
+  <option value="2063">2063</option>
+  <option value="2064">2064</option>
+  <option value="2065">2065</option>
+  <option value="2066">2066</option>
+  <option value="2067">2067</option>
+  <option value="2068">2068</option>      
 </select>    
         <label>Month</label>
     <select name="month">
@@ -71,13 +110,10 @@
 </select>
 <label>Earthquake Level</label>
     <select name="level">
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="5+">5+</option>
-  <option value="6">6</option>
-  <option value="6+">6+</option>
-  <option value="7">7</option>
-</select>
+  <option value="5">-6</option>
+  <option value="6">6-7</option>
+  <option value="7">7-</option>
+  </select>
 <label>Place</label>
 <select name="place">
 <option value="world">World</option>
@@ -85,26 +121,26 @@
   <option value="America">America</option>
   <option value="Philipine">Philipine</option>
   </select>
-<a href="/answer"><button>search</button></a>
+<a href="/answer"><button class="btn btn-primary">search</button></a>
 </form>
 </div>
  <div class="col-md-3">
- @if(auth()->user()->id == 1)
-<a href="/addpage"><button>additional</button></a>
-@else
-@endif
+ 
 </div>
 </div>
 <div class="row">
  <div class="col-md-8"></div>
  <div class="col-md-4">
+ @if(auth()->user()->id == 1)
+<a href="/addpage"><button class="btn btn-info">additional</button></a>
+@else
+@endif
+ <a href="/food"><button class="btn btn-info">foodlist</button></a>
+ <a href="/contribution"><button class="btn btn-info">Contribution</button></a>
  <br>
- <a href="/food"><button>foodlist</button></a>
- <a href="/contribution"><button>Contribution</button></a>
  <br>
- <br>
- <a href="/mail/mailable/send"><button>send e-mail</button></a>
- <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button>Shelter</button></a>
+ <a href="/mail/mailable/send"><button class="btn btn-warning">send e-mail</button></a>
+ <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button class="btn btn-danger">Shelter</button></a>
  </div>
 </div>
 @endsection
