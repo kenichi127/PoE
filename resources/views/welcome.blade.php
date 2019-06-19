@@ -116,6 +116,13 @@
   <option value="6">6-7</option>
   <option value="7">7-</option>
   </select>
+  <label>Place</label>
+<select name="place">
+<option value="world">World</option>
+  <option value="Japan">Japan</option>
+  <option value="America">America</option>
+  <option value="Philipine">Philipine</option>
+  </select>
 <a href="/answer"><button class="btn btn-primary">search</button></a>
     </form>
     </div>
