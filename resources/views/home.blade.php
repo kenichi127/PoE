@@ -110,13 +110,10 @@
 </select>
 <label>Earthquake Level</label>
     <select name="level">
-  <option value="4">4</option>
-  <option value="5">5</option>
-  <option value="5+">5+</option>
-  <option value="6">6</option>
-  <option value="6+">6+</option>
-  <option value="7">7</option>
-</select>
+  <option value="5">-6</option>
+  <option value="6">6-7</option>
+  <option value="7">7-</option>
+  </select>
 <label>Place</label>
 <select name="place">
 <option value="world">World</option>

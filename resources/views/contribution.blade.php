@@ -19,7 +19,7 @@
                     <span class="invalid-feedback">{{ $errors->first('content') }}</span>
                     @endif
                     <br>
-                    <input type="submit" value="Post" class="btn btn-default">
+                    <input type="submit" value="Post" class="btn btn-info">
                     
                 </div>
             </form>
