@@ -8,8 +8,13 @@ $share_title = 'Area:{$searchplace}%0aDate:{$searchyear}/{$searchmonth}/{$search
 @if($searchyear === '2020' or $searchyear === '2024' or $searchyear === '2028' or $searchyear === '2032' or $searchyear === '2036' or $searchyear === '2040' or $searchyear === '2044' or $searchyear === '2048' or $searchyear === '2052' or $searchyear === '2056' or $searchyear === '2060' or $searchyear === '2064' or $searchyear === '2068')
   @if($searchmonth==='2')
     @if($searchday === '30' or $searchday === '31')
-    <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
-    <a href="/home"><button class="btn btn-info">back</button></a>   
+      @if (Auth::check()) 
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/home"><button class="btn btn-info">back</button></a>
+      @else   
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/"><button class="btn btn-info">back</button></a>
+      @endif
     @else
     <div class='row'>
     <div class='col-sm-4'>
@@ -87,8 +92,13 @@ $share_title = 'Area:{$searchplace}%0aDate:{$searchyear}/{$searchmonth}/{$search
     </div>
   @elseif($searchmonth === '4' or $searchmonth === '6' or $searchmonth === '9' or $searchmonth === '11')
     @if($searchday==='31')
-    <p>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exit.</p>
-    <a href="/home"><button class="btn btn-info">back</button></a>
+      @if (Auth::check()) 
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/home"><button class="btn btn-info">back</button></a>
+      @else   
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/"><button class="btn btn-info">back</button></a>
+      @endif
     @else
     <div class='row'>
     <div class='col-sm-4'>
@@ -240,8 +250,13 @@ $share_title = 'Area:{$searchplace}%0aDate:{$searchyear}/{$searchmonth}/{$search
 @else
   @if($searchmonth==='2')
     @if($searchday === '29' or $searchday === '30' or $searchday === '31')
-    <p>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</p>
-    <a href="/home"><button class="btn btn-info">back</button></a>
+      @if (Auth::check()) 
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/home"><button class="btn btn-info">back</button></a>
+      @else   
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/"><button class="btn btn-info">back</button></a>
+      @endif
     @else
     <div class='row'>
     <div class='col-sm-4'>
@@ -318,8 +333,13 @@ $share_title = 'Area:{$searchplace}%0aDate:{$searchyear}/{$searchmonth}/{$search
     @endif
   @elseif($searchmonth === '4' or $searchmonth === '6' or $searchmonth === '9' or $searchmonth === '11')
     @if($searchday==='31')
-    <p>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exit.</p>
-    <a href="/home"><button class="btn btn-info">back</button></a>
+      @if (Auth::check()) 
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/home"><button class="btn btn-info">back</button></a>
+      @else   
+      <h1>{{ $searchyear }}/{{ $searchmonth }}/{{ $searchday }} is not exist.</h1>
+      <a href="/"><button class="btn btn-info">back</button></a>
+      @endif
     @else
     <div class='row'>
     <div class='col-sm-4'>
