@@ -14,7 +14,6 @@ class MailController extends Controller
     $name = auth()->user()->name;
     $text = auth()->user()->name;
     $to = auth()->user()->D_email;
-
     Mail::to($to)->send(new MailNotification($name, $text));
     return redirect('/home');
   }

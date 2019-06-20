@@ -7,17 +7,25 @@
             <form method="POST" action="/contribution/add">
                 <div class="form-group">
                     {{ csrf_field() }}
+                    <div>
                     <p class="ext-monospace">Title</p>
                     <input type="text" name="title" class="form-control" 
-                    value="{{old('title')}}">
+                    value="{{ old('title') }}" maxlength="256">
+                    {{ $errors->first('title.required') }}
+                    {{ $errors->first('title.max') }}
                     @if ($errors->has('title'))
                     <span class="invalid-feedback">{{ $errors->first('title') }}</span>
                     @endif
+                    </div>
+                    </div>
                     <p class="ext-monospace">Content</p>
-                    <input type="text" name="content" class=form-control value="{{old('content')}}">
+                    <input type="text" name="content" class=form-control value="{{ old('content') }}" maxlength="256">
+                    {{ $errors->first('content.required') }}
+                    {{ $errors->first('content.max') }}
                     @if ($errors->has('content'))
                     <span class="invalid-feedback">{{ $errors->first('content') }}</span>
                     @endif
+                    </div>
                     <br>
                     <input type="submit" value="Post" class="btn btn-info">
                     

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
@@ -109,7 +108,7 @@
   <option value="29">29</option>
   <option value="30">30</option>
   <option value="31">31</option>
-</select>
+  </select>
 <label>Earthquake Level</label>
     <select name="level">
   <option value="5">-6</option>

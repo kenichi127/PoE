@@ -140,7 +140,7 @@
  <br>
  <br>
  <a href="/mail/mailable/send"><button class="btn btn-warning">send e-mail</button></a>
- <a href="https://www.google.com/maps/search/Shelter/@9.9906686,122.9520288,9z?hl=ja"><button class="btn btn-danger">Shelter</button></a>
+ <a href="https://www.google.com/maps/search/nearest+shelter"><button class="btn btn-danger">Shelter</button></a>
  </div>
 </div>
 @endsection
